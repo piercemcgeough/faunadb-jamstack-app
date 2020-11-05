@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import LinkList from './components/LinkList';
-import LinkCreateForm from './components/LinkCreateForm';
+import LinkForm from './components/LinkForm';
 
 function App() {
     const [links, setLinks] = useState([]);
@@ -22,7 +22,7 @@ function App() {
     return (
         <div className="container py-5">
             <h1 className="text-center mb-5">List of Links</h1>
-            <LinkCreateForm refreshLinks={loadLinks} />
+            <LinkForm refreshLinks={loadLinks} />
             <LinkList links={links} refreshLinks={loadLinks} />
         </div>
     );
